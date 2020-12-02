@@ -15,5 +15,6 @@ v12.19.1
 
 npm init -y
 npm install webpack webpack-cli --save-dev
+npm install --save-dev style-loader css-loader
 ```
 
