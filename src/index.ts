@@ -1,12 +1,11 @@
-import _ from 'lodash';
 import './style/style.css';
-import Plant from './img/plant.png';
+const Plant = require('./img/plant.png');
 
 function component() {
   const element = document.createElement('div');
 
   // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = 'yo';
   element.classList.add('hello');
 
   // Add the image to our existing div.
