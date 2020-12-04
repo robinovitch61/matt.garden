@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "./docs",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
