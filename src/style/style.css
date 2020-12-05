@@ -3,8 +3,17 @@
   src: url('../fonts/Rye-Regular.ttf')  format('truetype');
 }
 
+@font-face {
+  font-family: 'Sanchez';
+  src: url('../fonts/Sanchez-Regular.ttf')  format('truetype');
+}
+
 h1 {
   font-family: Rye;
   font-weight: 100;
+}
+
+#day {
+  font-family: Sanchez;
 }
 
