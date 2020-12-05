@@ -1,2 +1,10 @@
+@font-face {
+  font-family: 'Rye';
+  src: url('../fonts/Rye-Regular.ttf')  format('truetype');
+}
 
+h1 {
+  font-family: Rye;
+  font-weight: 100;
+}
 
