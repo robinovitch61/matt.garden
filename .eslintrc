@@ -10,5 +10,19 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
     "plugin:@shopify/esnext"
-  ]
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
+  }
 }
