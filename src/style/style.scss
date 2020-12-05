@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Rye';
+  src: url('../fonts/Rye-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Sanchez';
+  src: url('../fonts/Sanchez-Regular.ttf')  format('truetype');
+}
+
+h1 {
+  font-family: Rye;
+  font-weight: 100;
+
+  &#day {
+    font-family: Sanchez;
+    display: inline;
+  }
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  &#left,
+  &#right {
+    width: 0;
+    height: 0;
+    display: block;
+    border: 1em solid transparent;
+  }
+
+  &#right {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1.6em solid black;
+  }
+
+  &#left {
+    margin-right: 1em;
+    padding-right: 1em;
+    border-right: 1.6em solid black;
+  }
+}
+
