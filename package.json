@@ -12,8 +12,7 @@
   },
   "pre-commit": [
     "typecheck",
-    "lint-fix",
-    "build"
+    "lint-fix"
   ],
   "repository": {
     "type": "git",
