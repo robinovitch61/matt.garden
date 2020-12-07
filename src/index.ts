@@ -1,5 +1,5 @@
 import "./style/style.scss";
-import {dayText, oppositeVisibility} from "./code/helpers";
+import {dayText, oppositeVisibility, setHeightsUsingJsBecauseMobileIsDumb} from "./code/helpers";
 
 // const GIFT_DATE = new Date('1/05/2021') // TODO - UNCOMMENT ME
 const GIFT_DATE = new Date("12/1/2020").getTime();
@@ -7,13 +7,12 @@ const GIFT_DATE = new Date("12/1/2020").getTime();
 const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 const dayTitle = document.getElementById("day");
-const grid = document.getElementById("grid");
 
-if (!leftButton || !rightButton || !dayTitle || !grid) {
+if (!leftButton || !rightButton || !dayTitle) {
   throw Error("Garden failed to grow");
 }
 
-grid.style.height = `${window.innerHeight}px`;
+setHeightsUsingJsBecauseMobileIsDumb();
 
 const today = new Date().getTime();
 const diffInDays = Math.ceil((today - GIFT_DATE) / (1000 * 60 * 60 * 24));
