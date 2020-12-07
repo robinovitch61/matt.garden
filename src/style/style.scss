@@ -30,6 +30,11 @@ span {
     height: 0;
     display: block;
     border: 1em solid transparent;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &#right {

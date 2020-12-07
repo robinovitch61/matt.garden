@@ -7,7 +7,7 @@
     "typecheck": "tsc",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
-    "build": "webpack",
+    "build": "webpack && git add dist",
     "dev": "webpack serve"
   },
   "pre-commit": [
