@@ -27,19 +27,21 @@ header {
   grid-row: 1;
   justify-self: start;
   padding-left: 2em;
+}
 
-  h1 {
-    margin: 0;
-    padding: 0;
-    font-family: Rye;
-    font-weight: 100;
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: Rye;
+  font-weight: 100;
 
-    &#day {
-      font-family: Sanchez;
-      display: inline;
-    }
+  &#day {
+    font-family: Sanchez;
+    font-style: normal;
+    font-weight: normal;
   }
 }
+
 #plant {
   grid-row: 2;
   background-color: lightgreen;
