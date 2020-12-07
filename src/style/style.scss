@@ -8,45 +8,95 @@
   src: url('../fonts/Sanchez-Regular.ttf')  format('truetype');
 }
 
-h1 {
-  font-family: Rye;
-  font-weight: 100;
-
-  &#day {
-    font-family: Sanchez;
-    display: inline;
-  }
+body {
+  margin: 0;
 }
 
-#controls {
-  display: flex;
+#grid {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  grid-template-rows: 1fr 4fr 1fr 2fr;
+  justify-items: center;
   align-items: center;
 }
 
-span {
-  &#left,
-  &#right {
-    width: 0;
-    height: 0;
-    display: block;
-    border: 1em solid transparent;
-    opacity: 0.5;
+header {
+  grid-row: 1;
+  justify-self: start;
+  padding-left: 2em;
 
-    &:hover {
-      opacity: 1;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Rye;
+    font-weight: 100;
+
+    &#day {
+      font-family: Sanchez;
+      display: inline;
     }
   }
+}
+#plant {
+  grid-row: 2;
+  background-color: lightgreen;
+  width: 40%;
+  height: 100%;
+  border-radius: 30px;
+}
 
-  &#right {
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 1.6em solid black;
-  }
+#controls {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 
-  &#left {
-    margin-right: 1em;
-    padding-right: 1em;
-    border-right: 1.6em solid black;
+  span {
+    &#left,
+    &#right {
+      width: 0;
+      height: 0;
+      display: block;
+      border: 1em solid transparent;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &#right {
+      margin-left: 1em;
+      padding-left: 1em;
+      border-left: 1.6em solid black;
+      border-right: 0 solid transparent;
+    }
+
+    &#left {
+      margin-right: 1em;
+      padding-right: 1em;
+      border-right: 1.6em solid black;
+      border-left: 0 solid transparent;
+    }
   }
 }
+
+#fact {
+  font-family: Sanchez;
+  font-size: 1.5em;
+  align-self: start;
+  width: 50%;
+  grid-row: 4;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
 
