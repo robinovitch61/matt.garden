@@ -115,6 +115,7 @@ h1 {
   align-self: start;
   width: 50%;
   grid-row: 4;
+  overflow: scroll;
 
   @media screen and (max-width: $mobile-width) {
     width: 90%;
@@ -124,6 +125,7 @@ h1 {
   p {
     margin: 0;
     padding: 0;
+    margin-bottom: 1em;
   }
 }
 
