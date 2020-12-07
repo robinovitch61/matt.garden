@@ -10,7 +10,6 @@
 
 body {
   margin: 0;
-  touch-action: manipulation;
 }
 
 #grid {
@@ -44,7 +43,7 @@ h1 {
 
 #plant {
   grid-row: 2;
-  background-color: lightgreen;
+  background-color: #C5FFE3;
   width: 40%;
   height: 100%;
   border-radius: 30px;

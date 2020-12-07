@@ -14,6 +14,8 @@ if (!leftButton || !rightButton || !dayTitle || !grid) {
 }
 
 grid.style.height = `${window.innerHeight}px`;
+// disable double tap zoom
+grid.addEventListener("click", () => ({}));
 
 const today = new Date().getTime();
 const diffInDays = Math.ceil((today - GIFT_DATE) / (1000 * 60 * 60 * 24));
