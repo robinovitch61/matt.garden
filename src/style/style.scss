@@ -1,3 +1,6 @@
+
+$mobile-width: 600px;
+
 @font-face {
   font-family: 'Rye';
   src: url('../fonts/Rye-Regular.ttf')  format('truetype');
@@ -10,6 +13,12 @@
 
 body {
   margin: 0;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $mobile-width) {
+    font-size: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 #grid {
@@ -26,6 +35,11 @@ header {
   grid-row: 1;
   justify-self: start;
   padding-left: 2em;
+
+  @media screen and (max-width: $mobile-width) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
 }
 
 h1 {
@@ -47,6 +61,10 @@ h1 {
   width: 40%;
   height: 100%;
   border-radius: 30px;
+
+  @media screen and (max-width: $mobile-width) {
+    width: 90%;
+  }
 }
 
 #controls {
@@ -65,8 +83,13 @@ h1 {
       border: 1em solid transparent;
       opacity: 0.5;
 
+      @media (hover: none) {
+        opacity: 1;
+      }
+
       &:hover {
         opacity: 1;
+
       }
     }
 
@@ -92,6 +115,11 @@ h1 {
   align-self: start;
   width: 50%;
   grid-row: 4;
+
+  @media screen and (max-width: $mobile-width) {
+    width: 90%;
+    font-size: 0.9rem;
+  }
 
   p {
     margin: 0;
