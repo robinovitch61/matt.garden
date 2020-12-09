@@ -15,7 +15,7 @@ module.exports = {
         proxy: "http://localhost:8080",
       },
       {
-        reload: false,
+        reload: true,
       },
     ),
   ],
