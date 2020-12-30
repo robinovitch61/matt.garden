@@ -1,4 +1,6 @@
 import "./style/style.scss";
+// eslint-disable-next-line @shopify/images-no-direct-imports
+import plantSvg from "./svg/plants.svg";
 import {dayText, oppositeVisibility} from "./code/helpers";
 
 // const GIFT_DATE = new Date('1/05/2021') // TODO - UNCOMMENT ME
@@ -8,8 +10,9 @@ const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 const dayTitle = document.getElementById("day");
 const grid = document.getElementById("grid");
+const plant = document.getElementById("plant");
 
-if (!leftButton || !rightButton || !dayTitle || !grid) {
+if (!leftButton || !rightButton || !dayTitle || !grid || !plant) {
   throw Error("Garden failed to grow");
 }
 
@@ -54,4 +57,4 @@ rightButton.addEventListener("click", () => {
   dayTitle.innerText = dayText(day);
 });
 
-
+plant.innerHTML = plantSvg;
