@@ -68,6 +68,30 @@ h1 {
   svg {
     width: 100%;
     height: 100%;
+
+    #yellow-flower {
+      #petals {
+        // color on hover
+        path {
+          transition: fill 1s ease-in-out;
+        }
+        &:hover {
+          path {
+            fill: red !important;
+          }
+        }
+
+        // spin petals
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: spin 3s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        @keyframes spin {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
   }
 }
 
