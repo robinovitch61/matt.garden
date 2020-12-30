@@ -16,6 +16,8 @@ if (!leftButton || !rightButton || !dayTitle || !grid || !plant) {
   throw Error("Garden failed to grow");
 }
 
+plant.innerHTML = plantSvg;
+
 grid.style.height = `${window.innerHeight}px`;
 // disable double tap zoom
 grid.addEventListener("click", () => ({}));
@@ -56,5 +58,3 @@ rightButton.addEventListener("click", () => {
   }
   dayTitle.innerText = dayText(day);
 });
-
-plant.innerHTML = plantSvg;

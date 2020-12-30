@@ -4,6 +4,7 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
+  mode: "production",
   entry: "./src/index.ts",
   plugins: [
     new CleanWebpackPlugin(),
