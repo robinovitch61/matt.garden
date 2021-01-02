@@ -45,6 +45,8 @@ header {
 h1 {
   margin: 0;
   padding: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
   font-family: Rye;
   font-weight: 100;
 
@@ -53,12 +55,17 @@ h1 {
     font-style: normal;
     font-weight: normal;
   }
+
+  @media screen and (max-width: $mobile-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 #plant {
   grid-row: 2;
   background-color: #c5faff;
-  width: 50%;
+  width: 70%;
   border-radius: 30px;
 
   @media screen and (max-width: $mobile-width) {
