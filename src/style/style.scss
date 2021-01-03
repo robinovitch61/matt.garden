@@ -1,5 +1,5 @@
 
-$mobile-width: 600px;
+$mobile-width: 1000px;
 
 @font-face {
   font-family: 'Rye';
@@ -35,10 +35,12 @@ header {
   grid-row: 1;
   justify-self: start;
   padding-left: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 
   @media screen and (max-width: $mobile-width) {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    //padding-top: 0.5em;
+    //padding-bottom: 0.5em;
   }
 }
 
@@ -47,6 +49,8 @@ h1 {
   padding: 0;
   font-family: Rye;
   font-weight: 100;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 
   &#day {
     font-family: Sanchez;
@@ -58,7 +62,7 @@ h1 {
 #plant {
   grid-row: 2;
   background-color: #c5faff;
-  width: 50%;
+  width: 55%;
   border-radius: 30px;
 
   @media screen and (max-width: $mobile-width) {
