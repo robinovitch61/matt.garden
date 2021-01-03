@@ -1,5 +1,18 @@
 
-const PLANT_FACTS = [
+export const PLANT_NAMES: string[] = [
+  "sunflower",
+  "moss-rock",
+  "lemon-tree",
+  "bay-laurel",
+  "lemongrass",
+  "cactus",
+  "fig-tree",
+  "passionfruit",
+  "fern",
+  "monstera",
+];
+
+export const PLANT_FACTS = [
   "testing 1",
   "testing 2",
   "testing 3",
@@ -11,5 +24,3 @@ const PLANT_FACTS = [
   "testing 9",
   "testing 10",
 ];
-
-export default PLANT_FACTS;

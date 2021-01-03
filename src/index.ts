@@ -1,8 +1,8 @@
 import "./style/style.scss";
 // eslint-disable-next-line @shopify/images-no-direct-imports
 import plantSvg from "./svg/plants.svg";
-import {dayText, oppositeVisibility} from "./code/helpers";
-import PLANT_FACTS from "./code/data";
+import {dayText, oppositeVisibility, togglePlant} from "./code/helpers";
+import {PLANT_FACTS, PLANT_NAMES} from "./code/data";
 
 // const GIFT_DATE = new Date('1/08/2021') // TODO - UNCOMMENT ME
 const GIFT_DATE = new Date("12/1/2020").getTime();
@@ -31,21 +31,25 @@ grid.addEventListener("click", () => ({}));
 // parse date
 const today = new Date().getTime();
 const diffInDays = Math.ceil((today - GIFT_DATE) / (1000 * 60 * 60 * 24));
-const currentDay = diffInDays > 1 ? diffInDays : 1;
+const currentDay = diffInDays > MAX_DAY ? MAX_DAY : diffInDays;
 let selectedDay = currentDay;
-if (selectedDay > MAX_DAY) {
-  selectedDay = MAX_DAY;
-}
 
 // set title, svg, plant fact
 header.innerText = "matt's garden";
+plant.style.visibility = "hidden";
 plant.innerHTML = plantSvg;
 fact.innerText = PLANT_FACTS[selectedDay - 1];
+
+// show plants
+PLANT_NAMES.forEach((pl) => togglePlant(pl));
+const range = Array.from(Array(selectedDay).keys());
+range.forEach((plantNum) => togglePlant(PLANT_NAMES[plantNum]));
+plant.style.visibility = "visible";
 
 // setup day controls
 dayTitle.innerText = dayText(selectedDay);
 leftButton.style.visibility = selectedDay === 1 ? "hidden" : "visible";
-rightButton.style.visibility = selectedDay === MAX_DAY ? "hidden" : "visible";
+rightButton.style.visibility = "hidden";
 
 // add event listeners on controls
 leftButton.addEventListener("click", () => {
@@ -53,6 +57,7 @@ leftButton.addEventListener("click", () => {
     return;
   }
   selectedDay -= 1;
+  togglePlant(PLANT_NAMES[selectedDay]);
   if (rightButton.style.visibility === "hidden") {
     rightButton.style.visibility = oppositeVisibility(rightButton);
   }
@@ -64,14 +69,15 @@ leftButton.addEventListener("click", () => {
 });
 
 rightButton.addEventListener("click", () => {
-  if (selectedDay === MAX_DAY) {
+  if (selectedDay === currentDay) {
     return;
   }
+  togglePlant(PLANT_NAMES[selectedDay]);
   selectedDay += 1;
   if (leftButton.style.visibility === "hidden") {
     leftButton.style.visibility = oppositeVisibility(leftButton);
   }
-  if (selectedDay === MAX_DAY) {
+  if (selectedDay === currentDay) {
     rightButton.style.visibility = oppositeVisibility(rightButton);
   }
   dayTitle.innerText = dayText(selectedDay);
