@@ -1,5 +1,5 @@
 
-$mobile-width: 1000px;
+$mobile-width: 1200px;
 
 @font-face {
   font-family: 'Rye';
@@ -131,7 +131,7 @@ h1 {
 
   @media screen and (max-width: $mobile-width) {
     width: 90%;
-    font-size: 0.9rem;
+    font-size: 1.6em;
   }
 
   p {
