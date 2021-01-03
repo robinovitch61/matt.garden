@@ -23,3 +23,13 @@ export const toggleSproutVisibility = (plantName: string): void => {
     throw Error(`no sprout named ${sproutId}`);
   }
 };
+
+export const setHaloVisibility = (plantName: string, visible: boolean): void => {
+  const sproutId = `halos-${plantName}`;
+  const elem = document.getElementById(sproutId);
+  if (elem) {
+    elem.style.visibility = visible ? "visible" : "hidden";
+  } else {
+    throw Error(`no halo named ${sproutId}`);
+  }
+};
