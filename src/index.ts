@@ -2,59 +2,78 @@ import "./style/style.scss";
 // eslint-disable-next-line @shopify/images-no-direct-imports
 import plantSvg from "./svg/plants.svg";
 import {dayText, oppositeVisibility} from "./code/helpers";
+import PLANT_FACTS from "./code/data";
 
-// const GIFT_DATE = new Date('1/05/2021') // TODO - UNCOMMENT ME
+// const GIFT_DATE = new Date('1/08/2021') // TODO - UNCOMMENT ME
 const GIFT_DATE = new Date("12/1/2020").getTime();
+const MAX_DAY = PLANT_FACTS.length;
 
+// elements
 const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 const dayTitle = document.getElementById("day");
 const grid = document.getElementById("grid");
 const plant = document.getElementById("plant");
+const header = document.getElementById("header");
+const fact = document.getElementById("fact-text");
 
-if (!leftButton || !rightButton || !dayTitle || !grid || !plant) {
+// validate elements found
+if (!leftButton || !rightButton || !dayTitle || !grid || !plant || !header || !fact) {
   throw Error("Garden failed to grow");
 }
 
-plant.innerHTML = plantSvg;
-
+// set grid height with js for mobile
 grid.style.height = `${window.innerHeight}px`;
+
 // disable double tap zoom
 grid.addEventListener("click", () => ({}));
 
+// parse date
 const today = new Date().getTime();
 const diffInDays = Math.ceil((today - GIFT_DATE) / (1000 * 60 * 60 * 24));
-const maxDay = diffInDays > 1 ? diffInDays : 1;
-let day = maxDay;
-dayTitle.innerText = dayText(day);
+const currentDay = diffInDays > 1 ? diffInDays : 1;
+let selectedDay = currentDay;
+if (selectedDay > MAX_DAY) {
+  selectedDay = MAX_DAY;
+}
 
-leftButton.style.visibility = day === 1 ? "hidden" : "visible";
-rightButton.style.visibility = day === maxDay ? "hidden" : "visible";
+// set title, svg, plant fact
+header.innerText = "matt's garden";
+plant.innerHTML = plantSvg;
+fact.innerText = PLANT_FACTS[selectedDay - 1];
 
+// setup day controls
+dayTitle.innerText = dayText(selectedDay);
+leftButton.style.visibility = selectedDay === 1 ? "hidden" : "visible";
+rightButton.style.visibility = selectedDay === MAX_DAY ? "hidden" : "visible";
+
+// add event listeners on controls
 leftButton.addEventListener("click", () => {
-  if (day === 1) {
+  if (selectedDay === 1) {
     return;
   }
-  day -= 1;
+  selectedDay -= 1;
   if (rightButton.style.visibility === "hidden") {
     rightButton.style.visibility = oppositeVisibility(rightButton);
   }
-  if (day === 1) {
+  if (selectedDay === 1) {
     leftButton.style.visibility = oppositeVisibility(leftButton);
   }
-  dayTitle.innerText = dayText(day);
+  dayTitle.innerText = dayText(selectedDay);
+  fact.innerText = PLANT_FACTS[selectedDay - 1];
 });
 
 rightButton.addEventListener("click", () => {
-  if (day === maxDay) {
+  if (selectedDay === MAX_DAY) {
     return;
   }
-  day += 1;
+  selectedDay += 1;
   if (leftButton.style.visibility === "hidden") {
     leftButton.style.visibility = oppositeVisibility(leftButton);
   }
-  if (day === maxDay) {
+  if (selectedDay === MAX_DAY) {
     rightButton.style.visibility = oppositeVisibility(rightButton);
   }
-  dayTitle.innerText = dayText(day);
+  dayTitle.innerText = dayText(selectedDay);
+  fact.innerText = PLANT_FACTS[selectedDay - 1];
 });
