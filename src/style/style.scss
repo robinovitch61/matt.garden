@@ -74,28 +74,52 @@ h1 {
     height: 100%;
 
     #sunflower {
-      #face {
-        // color on hover
-        path {
-          transition: fill 1s ease-in-out;
+      // color petals on hover
+      path {
+        transition: fill 1s ease-in-out;
+      }
+      &:hover {
+        #petals path {
+          fill: red !important;
         }
-        &:hover {
-          #petals path {
-            fill: red !important;
-          }
-        }
+      }
 
-        #petals {
-          // spin petals
-          transform-box: fill-box;
-          transform-origin: center;
-          animation: spin 3s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
-          @keyframes spin {
-            100% {
-              transform: rotate(360deg);
-            }
+      #petals {
+        // spin petals
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: spin 3s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        @keyframes spin {
+          100% {
+            transform: rotate(360deg);
           }
         }
+      }
+
+      $leaf-wave-secs: 3s;
+      $leaf-animation-inc: 4%;
+      $leaf-wave-height: 10deg;
+      @keyframes leaf {
+        #{0%, $leaf-animation-inc * 2, $leaf-animation-inc * 4, $leaf-animation-inc * 6} {
+          transform: rotate(0deg);
+        }
+        #{$leaf-animation-inc * 1, $leaf-animation-inc * 5} {
+          transform: rotate($leaf-wave-height);
+        }
+        #{$leaf-animation-inc * 3} {
+          transform: rotate(-$leaf-wave-height);
+        }
+      }
+
+      #left-leaf,
+      #right-leaf {
+        transform-box: fill-box;
+        animation: leaf $leaf-wave-secs infinite linear;
+        transform-origin: bottom right;
+      }
+
+      #right-leaf {
+        transform-origin: bottom left;
       }
     }
   }
