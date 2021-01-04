@@ -21,10 +21,12 @@ const dayTitle = document.getElementById("day");
 const grid = document.getElementById("grid");
 const plant = document.getElementById("plant");
 const header = document.getElementById("header");
-const fact = document.getElementById("fact-text");
+const factTitle = document.getElementById("fact-title");
+const factLatin = document.getElementById("fact-latin");
+const factText = document.getElementById("fact-text");
 
 // validate elements found
-if (!leftButton || !rightButton || !dayTitle || !grid || !plant || !header || !fact) {
+if (!leftButton || !rightButton || !dayTitle || !grid || !plant || !header || !factTitle || !factLatin || !factText) {
   throw Error("Garden failed to grow");
 }
 
@@ -49,11 +51,16 @@ if (diffInDays < 1) {
 }
 let selectedDay = currentDay;
 
-// set title, svg, plant fact
+// set title, svg
 header.innerText = "matt's garden";
 plant.style.visibility = "hidden";
 plant.innerHTML = plantSvg;
-fact.innerText = PLANT_FACTS[selectedDay - 1];
+
+// plant fact
+let plantFact = PLANT_FACTS[selectedDay - 1];
+factTitle.innerText = plantFact.name;
+factLatin.innerText = plantFact.latinName;
+factText.innerText = plantFact.text;
 
 // show plants - everything starts visible so make all invisible
 PLANT_NAMES.forEach((pl) => togglePlantVisibility(pl));
@@ -92,7 +99,10 @@ leftButton.addEventListener("click", () => {
     leftButton.style.visibility = oppositeVisibility(leftButton);
   }
   dayTitle.innerText = dayText(selectedDay);
-  fact.innerText = PLANT_FACTS[selectedDay - 1];
+  plantFact = PLANT_FACTS[selectedDay - 1];
+  factTitle.innerText = plantFact.name;
+  factLatin.innerText = plantFact.latinName;
+  factText.innerText = plantFact.text;
 });
 
 rightButton.addEventListener("click", () => {
@@ -111,5 +121,8 @@ rightButton.addEventListener("click", () => {
     rightButton.style.visibility = oppositeVisibility(rightButton);
   }
   dayTitle.innerText = dayText(selectedDay);
-  fact.innerText = PLANT_FACTS[selectedDay - 1];
+  plantFact = PLANT_FACTS[selectedDay - 1];
+  factTitle.innerText = plantFact.name;
+  factLatin.innerText = plantFact.latinName;
+  factText.innerText = plantFact.text;
 });

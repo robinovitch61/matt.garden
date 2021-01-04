@@ -3,7 +3,7 @@ export function oppositeVisibility(elem: HTMLElement): string {
   return elem.style.visibility === "hidden" ? "visible" : "hidden";
 }
 
-export const dayText = (day: number): string => `day ${day.toString().padStart(2, "0")}`;
+export const dayText = (day: number): string => `day ${day.toString()}`;
 
 export const togglePlantVisibility = (plantName: string): void => {
   const elem = document.getElementById(plantName);

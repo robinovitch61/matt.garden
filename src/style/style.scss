@@ -11,6 +11,11 @@ $mobile-width: 1200px;
   src: url('../fonts/Sanchez-Regular.ttf')  format('truetype');
 }
 
+@font-face {
+  font-family: 'XanhMono';
+  src: url('../fonts/XanhMono-Regular.ttf')  format('truetype');
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -124,12 +129,25 @@ h1 {
 
   @media screen and (max-width: $mobile-width) {
     width: 90%;
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 
-  p {
-    margin: 0 0 1em;
+  p:first-child {
+    margin-top: 0;
+
+    #fact-title {
+      font-weight: bold;
+    }
+
+    #fact-latin {
+      font-family: XanhMono;
+    }
+  }
+
+  p:last-child {
+    margin: 0 0 2em;
     padding: 0;
+    text-indent: 2em;
   }
 }
 
