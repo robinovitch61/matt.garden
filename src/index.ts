@@ -60,7 +60,7 @@ plant.innerHTML = plantSvg;
 let plantFact = PLANT_FACTS[selectedDay - 1];
 factTitle.innerText = plantFact.name;
 factLatin.innerText = plantFact.latinName;
-factText.innerText = plantFact.text;
+factText.innerHTML = plantFact.text;
 
 // show plants - everything starts visible so make all invisible
 PLANT_NAMES.forEach((pl) => togglePlantVisibility(pl));
