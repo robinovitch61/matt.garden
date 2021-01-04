@@ -11,7 +11,6 @@ v12.19.1
 ```
 
 * ran dev server with `npm run dev`
-* run ngrok with `ngrok http 8080 -host-header="localhost:8080"` and visit http site on mobile for mobile dev
-* added browsersync webpack plugin - ngrok no longer needed on same network
+* added browsersync webpack plugin for mobile dev
 * set eslint to --fix on save in intellij
 * builds on pre-commit and adds `dist` contents to commit before committing
