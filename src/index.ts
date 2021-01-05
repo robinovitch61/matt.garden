@@ -40,12 +40,12 @@ grid.addEventListener("click", () => ({}));
 const today = new Date().getTime();
 const diffInDays = Math.ceil((today - GIFT_DATE) / (1000 * 60 * 60 * 24));
 let currentDay: number;
-let calendarOver = false;
+let showHalos = true;
 if (diffInDays < 1) {
   currentDay = 1;
 } else if (diffInDays > MAX_DAY) {
   currentDay = MAX_DAY;
-  calendarOver = true;
+  showHalos = false;
 } else {
   currentDay = diffInDays;
 }
@@ -69,7 +69,7 @@ range.forEach((plantNum) => togglePlantVisibility(PLANT_NAMES[plantNum]));
 
 // show halo for new
 PLANT_NAMES.forEach((pl) => setHaloVisibility(pl, false));
-if (!calendarOver) {
+if (showHalos) {
   setHaloVisibility(PLANT_NAMES[currentDay - 1], true);
 }
 
