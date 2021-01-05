@@ -67,6 +67,6 @@ export const PLANT_FACTS: PlantFact[] = [
   {
     name: "Monstera Deliciosa",
     latinName: "Delicious Monster",
-    text: "Deliciosa means 'delicious', referring to their edible fruit. Monstera means 'monstrous', in reference to their size - over 9m (30ft) in many cases! In the wild, Monstera Deliciosa has incredibly rich fruit. It tastes like a combination of strawberries, passionfruit, mango, and pineapple (but only when blended in a smoothie with strawberries, passionfruit, mango and pineapple).",
+    text: "Deliciosa means 'delicious', referring to their edible fruit. Monstera means 'monstrous', in reference to their size - over 9m (30ft) in many cases! In the wild, Monstera Deliciosa has incredibly rich fruit. It tastes like a combination of strawberries, passionfruit, mango, and pineapple - but only when blended in a smoothie with strawberries, passionfruit, mango and pineapple. This concludes Matt's garden! Happy 2021 my friend ☀️ ❤️ 🚲 🌱",
   },
 ];
