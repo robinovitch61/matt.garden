@@ -210,29 +210,33 @@ h1 {
       }
     }
 
-    //#lemon-tree {
-    //  // lemon sweating
-    //  #lemon-sweat {
-    //    transition: opacity 1s ease-in-out;
-    //  }
-    //
-    //  &:hover {
-    //    #lemon-sweat {
-    //      opacity: 100%;
-    //    }
-    //  }
-    //
-    //  #lemon-fall {
-    //    $lemon-fall-secs: 5s;
-    //    transform-box: fill-box;
-    //    transform-origin: center;
-    //    animation: fall $lemon-fall-secs infinite linear;
-    //    @keyframes fall {
-    //      100% {
-    //        translateY(300%);
-    //      }
-    //    }
-    //  }
-    //}
+    #lemon-tree {
+      // lemon sweating
+      #lemon-sweat {
+        transition: opacity 1s ease-in-out;
+      }
+
+      &:hover {
+        #lemon-sweat {
+          opacity: 100%;
+        }
+      }
+
+      // lemon falling
+      #lemon-fall {
+        $lemon-fall-secs: 8s;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: fall $lemon-fall-secs infinite linear;
+        @keyframes fall {
+          45% {
+            transform: rotate(0deg);
+          }
+          50%, 100% {
+            transform: translateY(150px) rotate(20deg);
+          }
+        }
+      }
+    }
   }
 }
