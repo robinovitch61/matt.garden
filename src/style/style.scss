@@ -238,5 +238,56 @@ h1 {
         }
       }
     }
+
+    #lemongrass {
+      // blink on hover
+      &:hover {
+        #eyelids {
+          opacity: 100%;
+
+          #top-eyelids {
+            transform-box: fill-box;
+            transform-origin: top center;
+            animation: blink-top 2s infinite linear;
+            @keyframes blink-top {
+              10%, 20% {
+                transform: scaleY(1);
+              }
+              0%, 15%, 25%, 100% {
+                transform: scaleY(0);
+              }
+            }
+          }
+        }
+      }
+
+      // arm waving
+      #left-arm {
+        transform-box: fill-box;
+        transform-origin: bottom right;
+        animation: wave-left 1s infinite ease-in-out;
+        @keyframes wave-left {
+          0%, 100% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(-10deg);
+          }
+        }
+      }
+      #right-arm {
+        transform-box: fill-box;
+        transform-origin: bottom left;
+        animation: wave-right 1s infinite ease-in-out;
+        @keyframes wave-right {
+          0%, 100% {
+            transform: rotate(0deg);
+          }
+          50% {
+            transform: rotate(10deg);
+          }
+        }
+      }
+    }
   }
 }
