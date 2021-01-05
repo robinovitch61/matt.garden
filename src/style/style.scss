@@ -227,7 +227,7 @@ h1 {
         $lemon-fall-secs: 8s;
         transform-box: fill-box;
         transform-origin: center;
-        animation: fall $lemon-fall-secs infinite linear;
+        animation: fall $lemon-fall-secs infinite cubic-bezier(0.4, 0.52, 0.65, 0.97);
         @keyframes fall {
           45% {
             transform: rotate(0deg);
