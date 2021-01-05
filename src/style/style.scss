@@ -177,31 +177,62 @@ h1 {
     }
 
     #moss-rock {
-      // rock jump
+      // rock blushing
+      #rock-cheeks {
+        transition: opacity 1s ease-in-out;
+      }
+
+      &:hover {
+        #rock-cheeks {
+          opacity: 100%;
+        }
+      }
+
       #rock {
+        // rock jump
+        $rock-hop-secs: 3s;
+        $rock-tilt: 10deg;
+        $rock-hop-height: 50%;
         transform-box: fill-box;
         transform-origin: center;
-        animation: rock 3s infinite cubic-bezier(0.29, -0.41, 1, -0.16);
-
+        animation: rock $rock-hop-secs infinite cubic-bezier(0.39, -0.33, 1, -0.16);
         @keyframes rock {
-          0%, 100% {
+          40%, 100% {
             transform: translateY(0) rotate(0deg);
           }
           10% {
-            // negative is up
-            transform: translateY(-66%) rotate(30deg);
+            transform: translateY(-$rock-hop-height) rotate($rock-tilt);
           }
-          15% {
-            transform: translateY(-66%) rotate(0deg);
-          }
-          20% {
-            transform: translateY(-66%) rotate(-30deg);
-          }
-          35% {
-            transform: translateY(0) rotate(0deg);
+          18% {
+            transform: translateY(-$rock-hop-height) rotate(-$rock-tilt);
           }
         }
       }
     }
+
+    //#lemon-tree {
+    //  // lemon sweating
+    //  #lemon-sweat {
+    //    transition: opacity 1s ease-in-out;
+    //  }
+    //
+    //  &:hover {
+    //    #lemon-sweat {
+    //      opacity: 100%;
+    //    }
+    //  }
+    //
+    //  #lemon-fall {
+    //    $lemon-fall-secs: 5s;
+    //    transform-box: fill-box;
+    //    transform-origin: center;
+    //    animation: fall $lemon-fall-secs infinite linear;
+    //    @keyframes fall {
+    //      100% {
+    //        translateY(300%);
+    //      }
+    //    }
+    //  }
+    //}
   }
 }
