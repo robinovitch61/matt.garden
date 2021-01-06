@@ -130,6 +130,7 @@ h1 {
       path {
         transition: fill 1s ease-in-out;
       }
+
       &:hover {
         #petals path {
           fill: red !important;
@@ -275,6 +276,7 @@ h1 {
           }
         }
       }
+
       #right-arm {
         transform-box: fill-box;
         transform-origin: bottom left;
@@ -286,6 +288,36 @@ h1 {
           50% {
             transform: rotate(10deg);
           }
+        }
+      }
+    }
+
+    #bay-laurel {
+      // nuts swaying lol
+      .nut {
+        transform-box: fill-box;
+        transform-origin: top center;
+        animation: nut-sway 2s infinite ease-in-out;
+        @keyframes nut-sway {
+          45%, 100% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(10deg);
+          }
+          30% {
+            transform: rotate(-10deg);
+          }
+        }
+      }
+
+      // hearts on hover
+      #hearts {
+        transition: opacity 1s ease-in-out;
+      }
+      &:hover {
+        #hearts {
+          opacity: 100%;
         }
       }
     }
