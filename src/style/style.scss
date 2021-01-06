@@ -321,5 +321,85 @@ h1 {
         }
       }
     }
+
+    #fig-tree {
+      // swapping figs
+      #left-top,
+      #right-top {
+        transform-box: fill-box;
+        transform-origin: bottom center;
+      }
+      $swap-speed: 3s;
+      #left-top {
+        animation: left-swap $swap-speed infinite linear;
+        @keyframes left-swap {
+          0%, 75% {
+            transform: translateX(0px) rotate(0deg);
+          }
+          25%, 50% {
+            transform: translateX(25px) rotate(-30deg);
+          }
+        }
+      }
+      #right-top {
+        animation: right-swap $swap-speed infinite linear;
+        @keyframes right-swap {
+          0%, 75% {
+            transform: translateX(0px) rotate(0deg);
+          }
+          25%, 50% {
+            transform: translateX(-30px) rotate(50deg);
+          }
+        }
+      }
+
+      // awooga and arm spinning on hover
+      &:hover {
+        #left-eye,
+        #right-eye {
+          transform-box: fill-box;
+          transform-origin: bottom center;
+          animation: awooga 2s infinite ease-in-out;
+          @keyframes awooga {
+            100% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.3);
+            }
+          }
+          path {
+            animation: awooga-color 2s infinite ease-in-out;
+            @keyframes awooga-color {
+              0%, 100% {
+                fill: #edf507;
+              }
+              25%, 75% {
+                fill: #962bff;
+              }
+            }
+          }
+        }
+        #left-arm,
+        #right-arm {
+          transform-box: fill-box;
+          transform-origin: 50% 20%;
+          animation: spinnycc 0.5s infinite linear;
+        }
+        #left-arm {
+          animation: spinnycl 0.5s infinite linear;
+        }
+        @keyframes spinnycl {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        @keyframes spinnycc {
+          100% {
+            transform: rotate(-360deg);
+          }
+        }
+      }
+    }
   }
 }
