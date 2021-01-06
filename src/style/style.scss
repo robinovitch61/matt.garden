@@ -380,13 +380,13 @@ h1 {
             }
           }
         }
-        #left-arm,
-        #right-arm {
+        #fig-left-arm,
+        #fig-right-arm {
           transform-box: fill-box;
           transform-origin: 50% 20%;
           animation: spinnycc 0.5s infinite linear;
         }
-        #left-arm {
+        #fig-left-arm {
           animation: spinnycl 0.5s infinite linear;
         }
         @keyframes spinnycl {
@@ -397,6 +397,48 @@ h1 {
         @keyframes spinnycc {
           100% {
             transform: rotate(-360deg);
+          }
+        }
+      }
+    }
+
+    #passionfruit {
+      // big eyes on hover
+      #small-eyes,
+      #big-eyes {
+        transition: opacity 1s ease-in-out;
+      }
+      &:hover {
+        #small-eyes {
+          opacity: 0;
+        }
+        #big-eyes {
+          opacity: 100%;
+        }
+      }
+
+      // stalk sway
+      #stalk {
+        transform-box: fill-box;
+        transform-origin: bottom center;
+        animation: stalk-sway 2s infinite linear;
+        $sway-deg: 5deg;
+        $back-sway: 2deg;
+        @keyframes stalk-sway {
+          0%, 100% {
+            transform: rotate(0deg);
+          }
+          20%, 40% {
+            transform: rotate(-$sway-deg);
+          }
+          30% {
+            transform: rotate(-($sway-deg - $back-sway));
+          }
+          60%, 80% {
+            transform: rotate($sway-deg);
+          }
+          70% {
+            transform: rotate($sway-deg - $back-sway);
           }
         }
       }
