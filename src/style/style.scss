@@ -443,5 +443,77 @@ h1 {
         }
       }
     }
+
+    #cactus {
+      // pink flowers and stars on hover
+      #flowers {
+        transition: opacity 1s ease-in-out;
+      }
+      #stars {
+        path {
+          transition: fill 1s ease-in-out;
+        }
+      }
+      &:hover {
+        #flowers {
+          opacity: 100%;
+        }
+
+        #stars {
+          path {
+            fill: deeppink !important;
+          }
+        }
+      }
+
+      #round-shadow {
+        animation: shadow 8s infinite cubic-bezier(0.4, 0, 1, 1);
+        @keyframes shadow {
+          3%, 45% {
+            opacity: 0;
+          }
+          46%, 100% {
+            opacity: 100%;
+          }
+        }
+      }
+      #round {
+        transform-box: fill-box;
+        transform-origin: center center;
+        animation: cactus-bounce 8s infinite cubic-bezier(0.4, 0, 1, 1);
+        @keyframes cactus-bounce {
+          1% {
+            transform: translateY(1px);
+          }
+          7% {
+            transform: translateX(35px) translateY(-30px) rotate(-15deg);
+          }
+          10% {
+            transform: translateX(35px) translateY(-29px) rotate(-15deg);
+          }
+          18% {
+            transform: translateX(20px) translateY(-83px) rotate(0deg);
+          }
+          20%, 22% {
+            transform: translateX(20px) translateY(-81px);
+          }
+          30%, 33% {
+            transform: translateX(20px) translateY(-81px);
+          }
+          34% {
+            transform: translateX(20px) translateY(-80px);
+          }
+          37% {
+            transform: translateX(15px) translateY(-82px);
+          }
+          46% {
+            transform: translateX(0) translateY(0);
+          }
+          100% {
+            transform: translateX(0) translateY(0);
+          }
+        }
+      }
+    }
   }
 }
