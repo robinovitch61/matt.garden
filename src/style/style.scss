@@ -466,6 +466,7 @@ h1 {
         }
       }
 
+      // jumping
       #round-shadow {
         animation: shadow 8s infinite cubic-bezier(0.4, 0, 1, 1);
         @keyframes shadow {
@@ -511,6 +512,54 @@ h1 {
           }
           100% {
             transform: translateX(0) translateY(0);
+          }
+        }
+      }
+    }
+
+    #fern {
+      // swirly eyes on hover
+      &:hover {
+        #fern-left-eye,
+        #fern-right-eye {
+          transform-box: fill-box;
+          transform-origin: center center;
+          animation: fern-eyes 1s infinite linear;
+          @keyframes fern-eyes {
+            50% {
+              transform: rotate(180deg) scale(2);
+            }
+            100% {
+              transform: rotate(360deg) scale(1);
+            }
+          }
+        }
+      }
+
+      // waving
+      #fern-left-hand {
+        transform-box: fill-box;
+        transform-origin: 70% 90%;
+        animation: fern-wave-left 4s infinite linear;
+        @keyframes fern-wave-left {
+          50% {
+            transform: rotate(-15deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+      #fern-right-hand {
+        transform-box: fill-box;
+        transform-origin: 20% 90%;
+        animation: fern-wave-right 4s infinite linear;
+        @keyframes fern-wave-right {
+          50% {
+            transform: rotate(15deg);
+          }
+          100% {
+            transform: rotate(0deg);
           }
         }
       }
