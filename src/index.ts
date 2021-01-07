@@ -10,9 +10,9 @@ import {
 } from "./code/helpers";
 import {PLANT_FACTS, PLANT_NAMES} from "./code/data";
 
-// UNCOMMENT ME
 const GIFT_DATE = new Date("1/07/2021").getTime();
-// const GIFT_DATE = new Date("1/04/2020").getTime();
+// for testing
+// const GIFT_DATE = new Date("12/28/2020").getTime();
 const MAX_DAY = PLANT_FACTS.length;
 
 // elements

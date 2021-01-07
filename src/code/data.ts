@@ -27,12 +27,12 @@ export const PLANT_FACTS: PlantFact[] = [
   {
     name: "Mossy Rock",
     latinName: "Mossius Rockus",
-    text: "Mosses (mossi?) play a vital role in the development of new ecosystems. They're among the first plant colonisers of disturbed sites, such as when an area is deforested or affected by forest fires. They stabilise the soil surface and retain water, helping new plants to grow. Plus, they're hella soft and colorful.",
+    text: "Mosses (mossi?) play a vital role in the development of new ecosystems. They're among the first plants to grow again when an area is deforested or affected by forest fires. They stabilize the soil surface and retain water, helping new plants to grow. Plus, they're hella soft and colorful.",
   },
   {
     name: "Lemon Tree",
     latinName: "Citrus Limon",
-    text: "Lemons are technically berries! James Lind carried out the first randomized controlled trial in 1747 when investigating scurvy. He fed different diets to 6 groups of scurvy-laden sailors. The group that got lemons and oranges were soon well enough to care for the others. This is why sailors' diets today consist only of lemons!",
+    text: "Lemons are technically berries! James Lind carried out the first randomized controlled trial in 1747 when investigating scurvy cases in sailors. He fed different diets to 6 groups of scurvy-laden buccaneers. The group that got lemons and oranges were soon well enough to care for the other groups. This is why sailors' diets today consist only of lemons!",
   },
   {
     name: "California Bay Laurel",
@@ -47,7 +47,7 @@ export const PLANT_FACTS: PlantFact[] = [
   {
     name: "Cactus",
     latinName: "Cactaceae",
-    text: "Despite their cute and fuzzy appearance, cacti deserve a healthy amount of respect. In 1984, two Arizonan roommates took to shooting the nearby Saguaros with a shotgun for fun. Shooting at a 26 foot tall Saguaro caused a section of the cactus to fall and crushed one of the gunmen to death!",
+    text: "Despite their cute and fuzzy appearance, cacti deserve a healthy amount of respect. In 1984, two Arizonan roommates took to shooting the nearby Saguaros with a shotgun for fun. Shooting at a 26 foot tall Saguaro caused a section of the cactus to fall and crushed one of the gunmen to death.",
   },
   {
     name: "Fig Tree",
@@ -57,7 +57,7 @@ export const PLANT_FACTS: PlantFact[] = [
   {
     name: "Passionfruit",
     latinName: "Passiflora Edulis",
-    text: "The several varieties of passion fruit are generally purple or yellow in color. Within the berry, there are typically 250 black seeds, each 2.4 mm in length. This means it would only require 640,666,667 passionfruit berries in order to stack their seeds all the way from the Earth to the Moon!",
+    text: "The several varieties of passion fruit are generally purple or yellow in color. Within the berry, there are typically 250 black seeds, each 2.4 mm in length. This means it would only require 640,666,667 passionfruit berries in order to stack their seeds all the way from the Earth to the Moon! Best get to pickin'.",
   },
   {
     name: "Fern",
@@ -67,6 +67,6 @@ export const PLANT_FACTS: PlantFact[] = [
   {
     name: "Monstera Deliciosa",
     latinName: "Delicious Monster",
-    text: "Deliciosa means 'delicious', referring to their edible fruit. Monstera means 'monstrous', in reference to their size - over 9m (30ft) in many cases! In the wild, Monstera Deliciosa has incredibly rich fruit. It tastes like a combination of strawberries, passionfruit, mango, and pineapple - but only when blended in a smoothie with strawberries, passionfruit, mango and pineapple. This concludes Matt's garden! Happy 2021 my friend ☀️ ❤️ 🚲 🌱",
+    text: "Deliciosa means 'delicious', referring to their edible fruit. Monstera means 'monstrous', in reference to their size - over 9m (30ft) in many cases! In the wild, Monstera Deliciosa has incredibly rich fruit. It tastes like a combination of strawberries, passionfruit, mango, and pineapple - but only when blended in a smoothie with strawberries, passionfruit, mango and pineapple. This concludes Matt's garden! Luckily, these plants are like Neopets and never die no matter the level of neglect. They'll always be around for you to 'leaf' through later. Happy 2021 my friend ☀️ ❤️ 🚲 🌱",
   },
 ];
