@@ -2,6 +2,7 @@ const path = require("path");
 
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -19,6 +20,11 @@ module.exports = {
         reload: true,
       },
     ),
+    new CopyPlugin({
+      patterns: [
+        {from: "./src/img/favicon.png", to: "favicon.png"},
+      ],
+    }),
   ],
   module: {
     rules: [

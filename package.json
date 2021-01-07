@@ -7,13 +7,14 @@
     "typecheck": "tsc",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
-    "build": "webpack && git add dist",
+    "build": "webpack",
+    "build-and-add": "webpack && git add dist",
     "dev": "webpack serve"
   },
   "pre-commit": [
     "typecheck",
     "lint-fix",
-    "build"
+    "build-and-add"
   ],
   "repository": {
     "type": "git",
