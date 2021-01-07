@@ -564,5 +564,69 @@ h1 {
         }
       }
     }
+
+    #monstera {
+      // zees on hover
+      &:hover {
+        #zees {
+          animation: zees 4s infinite linear;
+          @keyframes zees {
+            10%, 50% {
+              opacity: 100%;
+            }
+            30%, 70% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      // leaves swaying
+      #monstera-front {
+        transform-box: fill-box;
+        transform-origin: 85% 100%;
+        animation: monstera-front 4s infinite linear;
+        @keyframes monstera-front {
+          50% {
+            transform: rotate(-5deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+      #monstera-left {
+        transform-box: fill-box;
+        transform-origin: 75% 100%;
+        animation: monstera-left 6s infinite linear;
+        @keyframes monstera-left {
+          25% {
+            transform: rotate(4deg);
+          }
+          50% {
+            transform: rotate(-4deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+      #monstera-right {
+        transform-box: fill-box;
+        transform-origin: bottom left;
+        animation: monstera-right 7s infinite linear;
+        @keyframes monstera-right {
+          25% {
+            transform: rotate(-2deg);
+          }
+          50% {
+            transform: rotate(5deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
   }
 }
