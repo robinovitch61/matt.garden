@@ -2664,9 +2664,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.86529"
-     inkscape:cx="534.00635"
-     inkscape:cy="799.56745"
+     inkscape:zoom="1.7374461"
+     inkscape:cx="1137.9556"
+     inkscape:cy="370.79296"
      inkscape:document-units="mm"
      inkscape:current-layer="layer11"
      showgrid="false"
@@ -9178,7 +9178,7 @@
            sodipodi:role="line"
            id="tspan15999"
            x="175.92699"
-           y="216.63377"></tspan></text>
+           y="216.63377" /></text>
       <g
          id="monstera-front">
         <path
@@ -10079,7 +10079,7 @@
        sodipodi:insensitive="true">
       <g
          id="halos-cactus"
-         transform="matrix(0.57142103,0,0,0.61912545,253.0547,18.081903)"
+         transform="matrix(0.57142103,0,0,0.61912545,254.64221,2.7360642)"
          style="display:inline">
         <ellipse
            style="opacity:0.639871;fill:none;fill-opacity:1;stroke:url(#radialGradient5533-4-4-5);stroke-width:7.156;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
